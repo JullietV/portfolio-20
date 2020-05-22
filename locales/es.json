@@ -1,0 +1,13 @@
+{
+    "links": {
+        "home": "Inicio",
+        "about": "Acerca de mi",
+        "projects": "Proyectos",
+        "blog": "Blog"
+    },
+    "home": {
+        "title": "Hola, soy ",
+        "introduction": "y soy una",
+        "adjective": "creadora"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "links": {
+        "home": "Home",
+        "about": "About me",
+        "projects": "Projects",
+        "blog": "Blog"
+    },
+    "home": {
+        "title": "Hi, I'm ",
+        "introduction": "and I'm a ",
+        "adjective": "creator"
+    }
+}

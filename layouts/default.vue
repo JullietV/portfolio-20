@@ -1,9 +1,49 @@
 <template>
-  <div>
+  <div :class="{'light': lightThemeActive}">
+    <navbar @increaseFont="increaseFont" @decreaseFont="decreaseFont" @changeTheme="handleTheme" />
     <nuxt />
   </div>
 </template>
+<script>
+import { mapState } from "vuex";
+import Navbar from "@/components/Navbar";
 
+export default {
+  name: "DefaultLayout",
+  components: {
+    Navbar
+  },
+  data() {
+    return {};
+  },
+  computed: {
+    ...mapState({
+      lightThemeActive: state => state.lightThemeActive
+    })
+  },
+  methods: {
+    handleTheme() {
+      this.$store.commit("SET_LIGHT_THEME", !this.lightThemeActive);
+    },
+    increaseFont() {
+      const html = document.getElementsByTagName("html")[0];
+      const style = window
+        .getComputedStyle(html, null)
+        .getPropertyValue("font-size");
+      let fontSize = parseFloat(style);
+      html.style.fontSize = fontSize + 1 + "px";
+    },
+    decreaseFont() {
+      const html = document.getElementsByTagName("html")[0];
+      const style = window
+        .getComputedStyle(html, null)
+        .getPropertyValue("font-size");
+      let fontSize = parseFloat(style);
+      html.style.fontSize = fontSize - 1 + "px";
+    }
+  }
+};
+</script>
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Raleway:wght@400;500;700&display=swap");
 
@@ -15,6 +55,10 @@
   --dark-gray: #555;
   --turquoise: #00eae6;
   --dark-turquoise: #00ceff;
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
@@ -55,6 +99,24 @@ body {
   width: 40px;
   vertical-align: bottom;
   background-color: var(--light-green);
+}
+
+.light {
+  .vue-typer .custom.char {
+    color: var(--purple);
+    vertical-align: bottom;
+
+    &.selected {
+      background: var(--turquoise);
+    }
+  }
+
+  .vue-typer .custom.caret {
+    height: 5px;
+    width: 40px;
+    vertical-align: bottom;
+    background-color: var(--dark-green);
+  }
 }
 
 .portfolio-container {

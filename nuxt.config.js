@@ -39,6 +39,7 @@ export default {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
+    'nuxt-material-design-icons',
     '@nuxtjs/bulma',
   ],
   router: {

@@ -12,13 +12,13 @@
         </p>
         <ul class="portfolio-habilities-list">
           <li>
-            <img src="/vue.svg" alt="VueJS" />
+            <img :src="lightThemeActive ? '/vue_dark.svg' : '/vue.svg'" alt="VueJS" />
           </li>
           <li>
-            <img src="/Js.svg" alt="Javascript" />
+            <img :src="lightThemeActive ? '/Js_dark.svg' : '/Js.svg'" alt="Javascript" />
           </li>
           <li>
-            <img src="/UX.svg" alt="User Experience" />
+            <img :src="lightThemeActive ? '/UX_dark.svg' : '/UX.svg'" alt="User Experience" />
           </li>
         </ul>
         <nav class="portfolio-home-nav">
@@ -45,6 +45,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   name: "home",
   head() {
@@ -54,6 +55,11 @@ export default {
     return {
       names: ["Julliet V!", "Julls!", "Jénnifer!"]
     };
+  },
+  computed: {
+    ...mapState({
+      lightThemeActive: state => state.lightThemeActive
+    })
   },
   created() {},
   methods: {}
@@ -65,6 +71,10 @@ export default {
   .portfolio-introduction strong {
     color: var(--dark-turquoise);
   }
+
+  .portfolio-title {
+    color: var(--purple);
+  }
 }
 
 .portfolio {
@@ -75,15 +85,15 @@ export default {
     }
   }
   &-title {
-    font-size: 64px;
-    line-height: 96px;
+    font-size: 4rem;
+    line-height: 6rem;
     color: var(--turquoise);
     font-family: "Poppins", sans-serif;
   }
 
   &-introduction {
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 2.25rem;
+    line-height: 2.625rem;
     margin-bottom: 15px;
 
     strong {

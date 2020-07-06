@@ -29,7 +29,8 @@ export default async () => {
         { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Raleway:wght@400;500;700&display=swap" }
       ]
     },
     /*

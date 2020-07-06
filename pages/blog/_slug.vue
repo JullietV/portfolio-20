@@ -27,6 +27,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 .portfolio-single {
-  padding-top: 190px;
+  padding-top: var(--padding-top-desktop);
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio-single {
+        padding-top: var(--padding-top-mobile);
+    }
 }
 </style>

@@ -12,7 +12,6 @@
         <h2>Blog</h2>
       </div>
       <div v-else></div>
-
       <ul class="portfolio-accessibility-options">
         <li>
           <NuxtLink
@@ -134,7 +133,11 @@ li {
   }
 
   i {
-    font-size: 43px;
+    font-size: 2.6875rem;
+  }
+
+  &--caller {
+    display: none;
   }
 }
 
@@ -152,7 +155,7 @@ li {
     display: flex;
     align-items: center;
     width: 33.3%;
-    font-size: 43px;
+    font-size: 2.6875rem;
     background: #c4c4c4;
     color: var(--dark-gray);
     height: 100%;
@@ -189,8 +192,8 @@ li {
 
   h1 {
     font-weight: bold;
-    font-size: 30px;
-    line-height: 45px;
+    font-size: 1.875rem;
+    line-height: 2.8125rem;
     color: var(--dark-gray);
 
     a {
@@ -201,10 +204,34 @@ li {
 
   h2 {
     font-weight: bold;
-    font-size: 36px;
-    line-height: 54px;
+    font-size: 2.25rem;
+    line-height: 3.375rem;
     color: var(--light-gray);
-    margin-top: 30px;
+    margin-top: 1.875rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-fix-header {
+    width: calc(100% - 30px);
+  }
+
+  .portfolio-header {
+    img {
+      display: none;
+    }
+
+    h1 {
+      color: var(--light-gray);
+    }
+
+    h2 {
+      display: none;
+    }
+  }
+
+  .portfolio-accessibility-options {
+    display: none;
   }
 }
 </style>
@@ -218,6 +245,14 @@ li {
   .vue-typer .custom.caret {
     background-color: var(--dark-gray);
     width: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-header {
+    .vue-typer .custom.char {
+      color: var(--light-gray);
+    }
   }
 }
 </style>

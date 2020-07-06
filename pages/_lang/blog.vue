@@ -51,6 +51,12 @@ export default {
 
 <style lang="scss" scoped>
 .portfolio-blog {
-  padding-top: 190px;
+  padding-top: var(--padding-top-desktop);
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio-blog {
+        padding-top: var(--padding-top-mobile);
+    }
 }
 </style>

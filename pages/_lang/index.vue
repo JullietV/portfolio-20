@@ -147,6 +147,18 @@ export default {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .portfolio-title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .portfolio-introduction {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .portfolio-home-image-wrapper {
     display: none;

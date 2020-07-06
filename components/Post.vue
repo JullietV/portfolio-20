@@ -40,7 +40,7 @@ export default {
   }
   &-title {
     font-weight: bold;
-    font-size: 36px;
+    font-size: 2.25rem;
     line-height: 54px;
     text-align: center;
     margin-bottom: 10px;
@@ -63,5 +63,11 @@ export default {
       transform: translate(0, -50%);
     }
   }
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio-post-thumb {
+        height: 100px
+    }
 }
 </style>

@@ -55,6 +55,8 @@ export default {
   --dark-gray: #555;
   --turquoise: #00eae6;
   --dark-turquoise: #00ceff;
+  --padding-top-desktop: 190px;
+  --padding-top-mobile: 70px;
 }
 
 html {
@@ -130,6 +132,10 @@ body {
   grid-template-rows: 1fr;
   gap: 15px 15px;
   grid-template-areas: ". . . . . . . . . . .";
+}
+
+@media screen and (max-width: 768px) {
+  
 }
 
 @media screen and (max-width: 1200px) {

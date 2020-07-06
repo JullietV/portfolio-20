@@ -1,0 +1,32 @@
+<template>
+  <div class="portfolio-single portfolio-container">
+    <Post :title="attributes.title" :date="attributes.date">
+      <component :is="singlePostComponent" />
+    </Post>
+  </div>
+</template>
+<script>
+import Post from "@/components/Post";
+export default {
+  name: "Single",
+  components: { Post },
+  async asyncData({ params }) {
+    try {
+      console.info(params.slug);
+      let post = await import(`~/content/${params.slug}.md`);
+      return {
+        attributes: post.attributes,
+        singlePostComponent: post.vue.component
+      };
+    } catch (err) {
+      console.debug(err);
+      return false;
+    }
+  }
+};
+</script>
+<style lang="scss" scoped>
+.portfolio-single {
+  padding-top: 190px;
+}
+</style>

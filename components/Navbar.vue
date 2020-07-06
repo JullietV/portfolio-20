@@ -1,12 +1,17 @@
 <template>
   <nav class="portfolio-fix-header">
     <div class="portfolio-container">
-      <div>
-        <h1 v-if="false">
-          Hi, I'm
-          <vue-typer :repeat="Infinity" :text="names" />
+      <div class="portfolio-header" v-if="$route.name !== 'index'">
+        <img src="/nav_blob.svg" alt="JullietV blobs" />
+        <h1>
+          <NuxtLink to="/">
+            {{ $t('home.title') }}
+            <vue-typer :repeat="Infinity" :text="names" />
+          </NuxtLink>
         </h1>
+        <h2>Blog</h2>
       </div>
+      <div v-else></div>
 
       <ul class="portfolio-accessibility-options">
         <li>
@@ -74,14 +79,19 @@
   </nav>
 </template>
 <script>
-import {mapState} from 'vuex'
+import { mapState } from "vuex";
 export default {
   name: "Navbar",
   components: {},
+  data() {
+    return {
+      names: ["Julliet V!", "Julls!", "Jénnifer!"]
+    };
+  },
   computed: {
-      ...mapState({
-          lightThemeActive: state => state.lightThemeActive
-      })
+    ...mapState({
+      lightThemeActive: state => state.lightThemeActive
+    })
   },
   methods: {
     changeTheme() {
@@ -109,6 +119,7 @@ li {
   & > div {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
   }
 }
 
@@ -155,6 +166,58 @@ li {
       background: transparent;
       border-left: 0;
     }
+  }
+}
+
+.portfolio-header {
+  padding-top: 5px;
+  position: relative;
+  width: 672px;
+
+  img {
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    left: -60px;
+  }
+
+  h1,
+  h2 {
+    position: relative;
+    z-index: 55;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 45px;
+    color: var(--dark-gray);
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 54px;
+    color: var(--light-gray);
+    margin-top: 30px;
+  }
+}
+</style>
+
+<style lang="scss">
+.portfolio-header {
+  .vue-typer .custom.char {
+    color: var(--dark-gray);
+  }
+
+  .vue-typer .custom.caret {
+    background-color: var(--dark-gray);
+    width: 20px;
   }
 }
 </style>

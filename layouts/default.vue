@@ -131,4 +131,10 @@ body {
   gap: 15px 15px;
   grid-template-areas: ". . . . . . . . . . .";
 }
+
+@media screen and (max-width: 1200px) {
+  body {
+    padding: 0 15px
+  }
+}
 </style>

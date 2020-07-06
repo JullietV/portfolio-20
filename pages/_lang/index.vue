@@ -24,13 +24,7 @@
         <nav class="portfolio-home-nav">
           <ul>
             <li>
-              <nuxt-link to="/">Blog</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="/">About me</nuxt-link>
-            </li>
-            <li>
-              <nuxt-link to="/">Projects</nuxt-link>
+              <nuxt-link to="/blog">Blog</nuxt-link>
             </li>
           </ul>
         </nav>
@@ -150,6 +144,18 @@ export default {
     height: 85%;
     bottom: 0;
     filter: brightness(0.87);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .portfolio-home-image-wrapper {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .portfolio-home-image-wrapper {
+    width: 92%;
   }
 }
 </style>

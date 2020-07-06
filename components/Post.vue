@@ -1,11 +1,11 @@
 <template>
   <article class="portfolio-post">
     <div class="portfolio-post-container">
-      <h3 class="portfolio-post-title">{{title}}</h3>
-      <p class="portfolio-post-date">{{date}}</p>
+      <h3 class="portfolio-post-title">{{attr.subject}}</h3>
+      <p class="portfolio-post-date">{{attr.date}}</p>
     </div>
     <div class="portfolio-post-thumb">
-      <img src="/posts/keyboard_apple_magic.jpg" alt="Keyboard Apple Magic" />
+      <img :src="attr.thumb" :alt="attr.subject" />
     </div>
     <div class="portfolio-post-container">
       <slot />
@@ -17,16 +17,9 @@
 export default {
   name: "Post",
   props: {
-    title: {
-      type: String,
-      default: "Título"
-    },
-    date: {
-      type: String,
-      default: "05 de Julio de 2020"
-    },
-    link: {
-      default: "/"
+    attr: {
+      type: Object,
+      default: () => {}
     }
   }
 };
@@ -66,8 +59,8 @@ export default {
 }
 
 @media screen and (max-width: 768px) {
-    .portfolio-post-thumb {
-        height: 100px
-    }
+  .portfolio-post-thumb {
+    height: 100px;
+  }
 }
 </style>

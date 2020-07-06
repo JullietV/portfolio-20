@@ -1,6 +1,6 @@
 <template>
-  <div class="portfolio-single portfolio-container">
-    <Post :title="attributes.title" :date="attributes.date">
+  <div v-if="singlePostComponent" class="portfolio-single portfolio-container">
+    <Post :attr="attributes">
       <component :is="singlePostComponent" />
     </Post>
   </div>

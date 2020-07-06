@@ -138,6 +138,8 @@ export default {
 
   .dods {
     animation: blobanimation alternate infinite 2s;
+    bottom: 0;
+    height: 90%;
   }
 
   .me {

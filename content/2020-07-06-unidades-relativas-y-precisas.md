@@ -10,12 +10,12 @@ tags:
   - unidades
 ---
 
-Ayer, medio forzándome a empezar/continuar ciertos proyectos que tenía en mente hace un tiempo 😅, decidí iniciar con los challenges de [FrontendMentor](https://frontendmentor.io) y llevé a cabo el primero que, si quieres, puedes ver [aquí](https://article-preview-component-phi.vercel.app/) 👩‍💻.
+Ayer, medio forzándome a empezar/continuar ciertos proyectos que tenía en mente hace un tiempo 😅, decidí iniciar con los challenges de <a href="https://frontendmentor.io" target="_blank">FrontendMentor</a> y llevé a cabo el primero que, si quieres, puedes ver <a href="https://article-preview-component-phi.vercel.app/" target="_blank">aquí</a> 👩‍💻.
 Moviendome por la plataforma, me di cuenta de que algunas de las personas que publicaban soluciones no conocían demasiado las unidades relativas de CSS y por ende estaban llevando a cabo soluciones estáticas sin responsive, por lo que bueno, me ha llevado a escribirles este post bien bonito que espero les sea de ayuda.
 
 ## ¿Qué son las unidades de longitud en CSS?
 > El tipo numérico con el que te vas a encontrar con mayor frecuencia es length, por ejemplo, 10px (píxeles) o 30em. En CSS se utilizan dos longitudes diferentes: relativa y absoluta. Es importante conocer la diferencia para entender qué dimensiones van a tener las cosas.
-> [*MDN*](https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS, 'La biblia del programador').
+> <a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS" target="_blank" title="La biblia del programador">*MDN*</a>.
 
 Así que, tal como nos indica *la biblia* 🤲 son las medidas con las que deberías estar estilizando elementos. Y además, hay dos tipos de medidas: relativas y absolutas.
 
@@ -132,8 +132,8 @@ Las unidades relativas son aplicadas para lograr "adaptabilidad" al crear Respon
 
 ¿Te pasó? que no cunda el pánico, porque te voy a compartir unos tutoriales muy buenos para iniciar en la práctica del Responsive Design.
 
-- [How to think responsively: a responsive web design tutorial](https://www.freecodecamp.org/news/how-to-start-thinking-responsively/)
-- [Sobre cómo usar px, em, rem y % en "Responsive Design"](https://abalozz.es/sobre-como-usar-px-em-rem-y-percent-en-responsive-design/)
+- <a href="https://www.freecodecamp.org/news/how-to-start-thinking-responsively/" target="_blank">How to think responsively: a responsive web design tutorial</a>
+- <a href="https://abalozz.es/sobre-como-usar-px-em-rem-y-percent-en-responsive-design/" target="_blank">Sobre cómo usar px, em, rem y % en "Responsive Design"</a>
 
 ### Cuándo utilizar unidades absolutas (Px)
 

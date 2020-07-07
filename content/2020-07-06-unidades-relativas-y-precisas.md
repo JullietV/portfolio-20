@@ -141,4 +141,4 @@ Las unidades absolutas debes aplicarlas a elementos que no deseas que varíen si
 
 Espero que el post te haya resultado útil ✨.
 
-Julls.
+Julls <3

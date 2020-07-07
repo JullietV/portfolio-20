@@ -17,7 +17,7 @@ Moviendome por la plataforma, me di cuenta de que algunas de las personas que pu
 > El tipo numérico con el que te vas a encontrar con mayor frecuencia es length, por ejemplo, 10px (píxeles) o 30em. En CSS se utilizan dos longitudes diferentes: relativa y absoluta. Es importante conocer la diferencia para entender qué dimensiones van a tener las cosas.
 > [*MDN*](https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Valores_y_unidades_CSS, 'La biblia del programador').
 
-Así que, tal como nos indica *la biblia* 🤲 son als medidas con las que deberías estar estilizando elementos. Y además, hay dos tipos de medidas: relativas y absolutas.
+Así que, tal como nos indica *la biblia* 🤲 son las medidas con las que deberías estar estilizando elementos. Y además, hay dos tipos de medidas: relativas y absolutas.
 
 ### Unidades de longitud absolutas
 Son aquellas que **determinan de forma específica, concreta y medible la longitud de los elementos**, sin que esta varíe dependiendo de algún otro factor.
@@ -67,7 +67,7 @@ Son aquellas que **determinan de forma específica, concreta y medible la longit
 Las unidades de medida absoluta son más utilizadas para impresión que para la web y, **de todas ellas, la única que deberías utilizar es el Píxel**.
 
 ### Unidades de longitud relativa
-Son aquellas que **varían dependiendo de otro factor (tamaño)**. Por ejemplo, si determinamos que nuestro elemento tendrá un width (ancho) de 50% le estamos indicando que debe ocupar la mitad del espacio que hereda de su elemento padre, que bien podría ser el alcho del dispositivo en el que visualizo el elemento, el ancho de la ventana del browser, el ancho del div que lo contenga, etc.
+Son aquellas que **varían dependiendo de otro factor (tamaño)**. Por ejemplo, si determinamos que nuestro elemento tendrá un width (ancho) de 50% le estamos indicando que debe ocupar la mitad del espacio que hereda de su elemento padre, que bien podría ser el ancho del dispositivo en el que visualizo el elemento, el ancho de la ventana del browser, el ancho del div que lo contenga, etc.
 
 <table>
 <thead>

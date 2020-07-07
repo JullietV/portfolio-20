@@ -1,11 +1,7 @@
 <template>
   <div class="portfolio-blog">
     <div class="portfolio-container" v-if="posts">
-      <Post
-        v-for="post in posts"
-        :attr="post.attributes"
-        :key="post.attributes.subject"
-      >
+      <Post v-for="post in posts" :attr="post.attributes" :key="post.attributes.subject">
         {{post.attributes.extract}}
         <nuxt-link class="portfolio-blog-read-more-btn" :to="getPermalink(post)">
           Ver más
@@ -22,6 +18,9 @@ export default {
   name: "Blog",
   components: {
     Post
+  },
+  head() {
+    return { title: "Blog · Julliet V." };
   },
   async asyncData() {
     const resolve = require.context("~/content/", true, /\.md$/);

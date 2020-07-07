@@ -1,6 +1,6 @@
 <template>
-  <div v-if="singlePostComponent" class="portfolio-single portfolio-container">
-    <Post :attr="attributes">
+  <div class="portfolio-single portfolio-container">
+    <Post v-if="attributes" :attr="attributes">
       <component :is="singlePostComponent" />
     </Post>
   </div>
@@ -10,17 +10,29 @@ import Post from "@/components/Post";
 export default {
   name: "Single",
   components: { Post },
-  async asyncData({ params }) {
-    try {
-      console.info(params.slug);
-      let post = await import(`~/content/${params.slug}.md`);
-      return {
-        attributes: post.attributes,
-        singlePostComponent: post.vue.component
-      };
-    } catch (err) {
-      console.debug(err);
-      return false;
+  data() {
+    return {
+      attributes: null,
+      singlePostComponent: null
+    };
+  },
+  head() {
+    return { title: 'Julliet V.' };
+  },
+  created() {
+    this.importPost();
+  },
+  methods: {
+    async importPost() {
+      try {
+        const post = await import(`~/content/${this.$route.params.slug}.md`);
+        this.attributes = post.attributes,
+        this.singlePostComponent = post.vue.component
+
+      } catch (err) {
+        console.debug(err);
+        return false;
+      }
     }
   }
 };
@@ -31,8 +43,8 @@ export default {
 }
 
 @media screen and (max-width: 768px) {
-    .portfolio-single {
-        padding-top: var(--padding-top-mobile);
-    }
+  .portfolio-single {
+    padding-top: var(--padding-top-mobile);
+  }
 }
 </style>

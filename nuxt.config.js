@@ -51,6 +51,7 @@ export default async () => {
     ** Nuxt.js dev-modules
     */
     buildModules: [
+      '@nuxtjs/moment',
     ],
     /*
     ** Nuxt.js modules

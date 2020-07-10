@@ -4,6 +4,12 @@ const path = require("path");
 var glob = require('glob');
 
 async function getDynamicPaths(urlFilepathTable) {
+  console.log('hola, ojalá', ...Object.keys(urlFilepathTable).map(url => {
+    var filepathGlob = urlFilepathTable[url];
+    return glob
+      .sync(filepathGlob, { cwd: 'content' })
+      .map(filepath => `${url}/${path.basename(filepath, '.md')}`);
+  }))
   return [].concat(
     ...Object.keys(urlFilepathTable).map(url => {
       var filepathGlob = urlFilepathTable[url];
@@ -17,7 +23,7 @@ async function getDynamicPaths(urlFilepathTable) {
 
 export default async () => {
   return {
-    mode: 'spa',
+    mode: 'universal',
     /*
     ** Headers of the page
     */

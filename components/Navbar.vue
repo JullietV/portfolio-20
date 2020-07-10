@@ -225,9 +225,6 @@ li {
   }
 }
 .portfolio-options {
-  &-wrapper {
-  }
-
   &-links {
     width: 100%;
     height: 45px;

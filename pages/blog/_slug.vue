@@ -19,7 +19,7 @@ export default {
   head() {
     return { title: 'Julliet V.' };
   },
-  created() {
+  mounted() {
     this.importPost();
   },
   methods: {

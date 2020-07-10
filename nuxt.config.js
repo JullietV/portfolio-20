@@ -73,7 +73,7 @@ export default async () => {
     ],
     generate: {
       routes: await getDynamicPaths({
-        '/posts': 'posts/*.md'
+        '/blog': 'blog/*.md'
       })
     },
     /*
